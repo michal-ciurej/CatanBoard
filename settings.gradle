@@ -1,0 +1,2 @@
+rootProject.name='CatanBoard'
+include ':app'

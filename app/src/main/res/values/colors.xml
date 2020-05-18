@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="backback">#D3D3D4</color>
+    <color name="darkred">#661B08</color>
+    <color name="darkest">#160B01</color>
+    <color name="orange">#FF5E08</color>
+    <color name="background_blue">#3D74C0</color>
+    <color name="background_purple">#A252CE</color>
+    <color name="burgundy_top">#E69E47</color>
+    <color name="burgundy_bottom">#D94862</color>
+    <color name="button_normal">#EEDA70</color>
+    <color name="button_pressed">#855C36</color>
+</resources>
