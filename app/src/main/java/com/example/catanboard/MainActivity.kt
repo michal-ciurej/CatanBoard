@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val tokenbottom = findViewById<View>(R.id.tokenbottombottom)
         val tokencenterbottom = findViewById<View>(R.id.tokencenterbottom)
-        val tokencenter = findViewById<View>(R.id.tokensCenter)
+        val tokencenter = findViewById<View>(R.id.tokenscenter)
         val tokencentertop = findViewById<View>(R.id.tokencentertop)
         val tokentop = findViewById<View>(R.id.tokentop)
 
