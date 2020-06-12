@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         val tokenbottom = findViewById<View>(R.id.tokenbottombottom)
         val tokencenterbottom = findViewById<View>(R.id.tokencenterbottom)
-        val tokencenter = findViewById<View>(R.id.tokenscenter)
+        val tokencenter = findViewById<View>(R.id.tokencenter)
         val tokencentertop = findViewById<View>(R.id.tokencentertop)
-        val tokentop = findViewById<View>(R.id.tokentop)
+        val tokentop = findViewById<View>(R.id.tokentoptop)
 
 
 //right so generally the logic is pretty simple: every loop of the function I'm building some Lists of both the empty placeholders for the Hexes and Tokens as well as the Hex and token Resources
