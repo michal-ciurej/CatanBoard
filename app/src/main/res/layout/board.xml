@@ -9,7 +9,6 @@
     tools:context=".MainActivity">
 
 
-    <!-- Hello to xml 2, there's a MainActivity one but I FUBAR'd that one so I rebuilt it here -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="400dp"
