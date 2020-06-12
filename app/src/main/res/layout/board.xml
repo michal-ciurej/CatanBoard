@@ -614,7 +614,7 @@
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/token" />
+                    app:srcCompat="@drawable/hex18" />
 
                 <ImageView
                     android:id="@+id/token14"
@@ -691,7 +691,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/btn_background_selector"
+        android:background="@color/background_purple"
         android:text="@string/generate"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -707,9 +707,9 @@
         android:layout_height="60dp"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="62dp"
-        android:background="@drawable/btn_background_selector"
+        android:background="@color/background_purple"
         android:elevation="6dp"
-        android:text="ToggleButton"
+        android:text="@string/toggle"
         android:translationZ="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
