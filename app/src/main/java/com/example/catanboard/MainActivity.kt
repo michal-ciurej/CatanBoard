@@ -105,6 +105,7 @@ class MainActivity : AppCompatActivity() {
             )
 
 
+
             //fun tester(placeholderlist, TokenIdList: , tokenList: , ){
 
             //this is the code to populate on of the hexes with the black tile, the thief
@@ -117,9 +118,11 @@ class MainActivity : AppCompatActivity() {
             placeholderlist.removeAt(randomnumer)
 
             //up until now, not shuffled
-            Collections.shuffle(placeholderlist)
-            Collections.shuffle(TokenIdList)
+            placeholderlist.shuffle()
+            TokenIdList.shuffle()
             //this is why Im using lists and not arrays: shuffle works on them
+
+
 
 
             for (i in 0..2) {
@@ -133,7 +136,7 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            Thread.sleep(1000)
+
 
             for (i in 3..5) {
                 var imageView = placeholderlist[i]
@@ -142,7 +145,7 @@ class MainActivity : AppCompatActivity() {
                 tokenView.setImageResource(tokenList[i])
 
             }
-            Thread.sleep(1000)
+
 
 
             for (i in 6..9) {
@@ -152,7 +155,7 @@ class MainActivity : AppCompatActivity() {
                 tokenView.setImageResource(tokenList[i])
 
             }
-            Thread.sleep(1000)
+
             //these sleeps are remains from tests when I checked live which bit is being executed and which bit works so I'm keeping them for future tests xD
 
 
@@ -176,32 +179,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //onclick starts here. Old code takes the first token Array and randomizes it. Super simple but it doesn't work with my algorithm.
-
-        //bigger issue with this was the tokens, I actually only need 18 of the tiles filled so I need to remove one item from the List first.
-
-        //super easy but it
-//        fun assigner() {
-//
-//            shuffle(imageIdList)
-//            shuffle(placeholderlist)
-//
-//            //loop starts here
-//            for (i in 0..18) {
-//
-//
-//                var imageView = placeholderlist[i]
-//                imageView.setImageResource(imageIdList[3])
-//
-//
-//            } //end loop
-//        }
-
-
-        //Visibility toggle
-
 
         btnn.setOnClickListener{dothing()}
+
+
+
         toggle.setOnCheckedChangeListener{ toggle, isChecked ->
 
             if (isChecked) {
@@ -224,30 +206,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
-/*
-       switch.setOnCheckedChangeListener{buttonView, isChecked ->
-            if (isChecked) {
-                tokentop.visibility = View.INVISIBLE
-                tokencentertop.visibility = View.INVISIBLE
-                tokencenter.visibility = View.INVISIBLE
-                tokencenterbottom.visibility = View.INVISIBLE
-                tokenbottom.visibility = View.INVISIBLE
-
-                //didn't find a way to make a variable with multiple views so for now it just does the command a million times, might do an array and another for loop
-                    }
-
-            else {
-                tokentop.visibility = View.VISIBLE
-                tokencentertop.visibility = View.VISIBLE
-                tokencenter.visibility = View.VISIBLE
-                tokencenterbottom.visibility = View.VISIBLE
-                tokenbottom.visibility = View.VISIBLE
-
-            }
-            }
-
-        */
 
     }
 }
