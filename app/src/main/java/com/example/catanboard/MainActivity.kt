@@ -1,5 +1,6 @@
 package com.example.catanboard
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(board)
+
+
         val btnn = findViewById<View>(R.id.Butt)
 
 
@@ -206,6 +209,14 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+    }
+
+    fun gotoRules(view: View) {
+        intent = Intent(this, Rules::class.java)
+
+        startActivity(intent)
+
 
     }
 }
