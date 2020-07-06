@@ -11,6 +11,7 @@
     <color name="background_purple">#784ef9</color>
     <color name="burgundy_top">#E69E47</color>
     <color name="burgundy_bottom">#D94862</color>
-    <color name="yellow">#face03</color>
+    <color name="yellow">#DED88A</color>
     <color name="button_pressed">#855C36</color>
+    <color name="textblue">#2B3865</color>
 </resources>
