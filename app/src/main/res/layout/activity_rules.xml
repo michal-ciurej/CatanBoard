@@ -51,9 +51,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/padding"
-                android:text="Button"
-                app:layout_constraintStart_toStartOf="@id/firstthird"
-                app:layout_contraintEnd_toEndOf="@id/secondthird" />
+                android:onClick="gotoDice"
+                android:text="@string/Dice"
+
+                />
 
             <Button
                 android:id="@+id/button6"
@@ -63,17 +64,16 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/padding"
-                android:text="Button"
-                app:layout_contraintEnd_toStartOf="@id/secondthird" />
+                android:onClick="gotoBoard"
+                android:text="@string/Board" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/padding"
-                android:onClick="sendToFirst"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/padding"
+                android:text="@string/Rules" />
         </LinearLayout>
 
         <ScrollView

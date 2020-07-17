@@ -219,4 +219,12 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun gotoDice(view: View) {
+        intent = Intent(this, Dice::class.java)
+
+        startActivity(intent)
+
+
+    }
 }

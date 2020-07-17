@@ -3,8 +3,12 @@
     <string name="welcome">Title of app placeholder</string>
     <string name="generate">Randomise</string>
     <string name="switcheroo">Switch</string>
+    <string name="Dice">Dice Roller</string>
+    <string name="Rules">Game Overview</string>
+    <string name="Board">Board Generator</string>
     <string name="toggle">Tokens</string>
     <string name="rules">Rulebook</string>
+    <string name="roll">Roll Dice</string>
     <string name="overview1">The island of Catan lies before you. The isle consists of 19 terrain tiles surrounded by ocean. Your goal is to settle on Catan, and expand your territory until it becomes the largest and most glorious in Catan.</string>
     <string name="overview2">There are five productive terrain types and one desert on Catan. Each terrain type produces a different type of resource (the desert produces nothing). Each resource you receive is represented by a card.</string>
     <string name="overview3">You begin the game with 2 settlements and 2 roads. Each settlement is worth 1 Victory point. You therefore start the game with 2 Victory points! The first player to acquire 10 Victory points on their turn wins the game</string>
