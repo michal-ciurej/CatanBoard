@@ -8,6 +8,9 @@
     <color name="darkest">#160B01</color>
     <color name="orange">#FF5E08</color>
     <color name="background_blue">#386F8F</color>
+    <color name="background_blue_darker">#355669</color>
+    <color name="background_blue_lighter">#7C9CAF</color>
+    <color name="interlink">#A1BECE</color>
     <color name="background_purple">#784ef9</color>
     <color name="burgundy_top">#E69E47</color>
     <color name="burgundy_bottom">#D94862</color>

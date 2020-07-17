@@ -3,7 +3,7 @@
     <string name="welcome">Title of app placeholder</string>
     <string name="generate">Randomise</string>
     <string name="switcheroo">Switch</string>
-    <string name="Dice">Dice Roller</string>
+    <string name="Dice">Dice Randomiser</string>
     <string name="Rules">Game Overview</string>
     <string name="Board">Board Generator</string>
     <string name="toggle">Tokens</string>
