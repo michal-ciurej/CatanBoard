@@ -8,715 +8,768 @@
     android:background="@drawable/main_bg"
     tools:context="com.example.catanboard.MainActivity">
 
+    <LinearLayout
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="400dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginBottom="24dp"
-            android:adjustViewBounds="true"
+            android:layout_weight="1"
+            android:background="@drawable/padding"
+            android:onClick="gotoDice"
+            android:text="@string/Dice" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/padding"
+            android:text="@string/Board" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/padding"
+            android:onClick="gotoRules"
+            android:text="@string/Rules" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/padding"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bkg2" />
+            app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/GridConstraint"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView19"
-            app:layout_constraintStart_toStartOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="24dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bkg3" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline1"
+            <ToggleButton
+                android:id="@+id/toggleButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.175"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_design"
+                android:elevation="6dp"
+                android:text="@string/toggle"
+                android:textColor="@color/backback"
+                android:translationZ="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Butt"
+                app:layout_constraintTop_toBottomOf="@+id/GridConstraint" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.35"
-                app:layout_constraintTop_toTopOf="parent" />
+            <Button
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.525"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/Butt"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/button_design"
+                android:elevation="5dp"
+                android:text="@string/generate"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/backback"
+                android:translationZ="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/toggleButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GridConstraint" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.7"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.1"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.2"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.4"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.6"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.8"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.9"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <LinearLayout
-                android:id="@+id/Lineartop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/guideline11"
-                app:layout_constraintStart_toStartOf="@id/guideline10"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/GridConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                app:layout_constraintStart_toStartOf="@+id/imageView19"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/hex0"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.175"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex1"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.35"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex2"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.525"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/guideline9"
-                app:layout_constraintStart_toStartOf="@id/guideline5"
-                app:layout_constraintTop_toTopOf="@id/guideline3">
-
-                <ImageView
-                    android:id="@+id/hex3"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.7"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex4"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex5"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline10"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.2"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex6"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/guideline2">
-
-
-                <ImageView
-                    android:id="@+id/hex7"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline8"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex8"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline11"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex9"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline9"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/hex10"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/Lineartop"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guideline11"
+                    app:layout_constraintStart_toStartOf="@id/guideline10"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/hex11"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/hex0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
-            </LinearLayout>
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guideline9"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toTopOf="@id/guideline3">
 
-            <LinearLayout
-                android:id="@+id/Linearbottom"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/guideline11"
-                app:layout_constraintStart_toStartOf="@id/guideline10"
-                app:layout_constraintTop_toTopOf="@id/guideline4">
+                    <ImageView
+                        android:id="@+id/hex3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/hex12"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/hex4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/guideline2">
 
-                <ImageView
-                    android:id="@+id/hex13"
-                    android:layout_width="match_parent"
+
+                    <ImageView
+                        android:id="@+id/hex7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Linearbottom"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guideline11"
+                    app:layout_constraintStart_toStartOf="@id/guideline10"
+                    app:layout_constraintTop_toTopOf="@id/guideline4">
 
-                <ImageView
-                    android:id="@+id/hex14"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/hex12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/hex14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/guideline9"
+                    app:layout_constraintStart_toStartOf="@id/guideline5"
+                    app:layout_constraintTop_toTopOf="@id/guideline1">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/hex15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        app:srcCompat="@drawable/hex18" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/guideline9"
-                app:layout_constraintStart_toStartOf="@id/guideline5"
-                app:layout_constraintTop_toTopOf="@id/guideline1">
+                    <ImageView
+                        android:id="@+id/hex16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/hex15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    app:srcCompat="@drawable/hex18" />
+                    <ImageView
+                        android:id="@+id/hex17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/hex16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    <ImageView
+                        android:id="@+id/hex18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/hex17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
-
-                <ImageView
-                    android:id="@+id/hex18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
-
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/tokenGridConstraint"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/imageView19"
-            app:layout_constraintStart_toStartOf="@+id/imageView19"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.175"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.35"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.525"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.7"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.1"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.2"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.4"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.6"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.8"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/tokenguideline9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.9"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <LinearLayout
-                android:id="@+id/tokentoptop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/tokenguideline11"
-                app:layout_constraintStart_toStartOf="@id/tokenguideline10"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tokenGridConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView19"
+                app:layout_constraintStart_toStartOf="@+id/imageView19"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/token0"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.175"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token1"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.35"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token2"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.525"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tokencenterbottom"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/tokenguideline9"
-                app:layout_constraintStart_toStartOf="@id/tokenguideline5"
-                app:layout_constraintTop_toTopOf="@id/tokenguideline3">
-
-                <ImageView
-                    android:id="@+id/token3"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline4"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.7"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token4"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline5"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.1"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token5"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline10"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.2"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token6"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline6"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tokencenter"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/tokenguideline2">
-
-
-                <ImageView
-                    android:id="@+id/token7"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline8"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.6"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token8"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline11"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.8"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token9"
-                    android:layout_width="match_parent"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/tokenguideline9"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.9"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-                <ImageView
-                    android:id="@+id/token10"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:id="@+id/tokentoptop"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/tokenguideline11"
+                    app:layout_constraintStart_toStartOf="@id/tokenguideline10"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/token11"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/token0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tokencenterbottom"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
-            </LinearLayout>
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/tokenguideline9"
+                    app:layout_constraintStart_toStartOf="@id/tokenguideline5"
+                    app:layout_constraintTop_toTopOf="@id/tokenguideline3">
 
-            <LinearLayout
-                android:id="@+id/tokenbottombottom"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/tokenguideline11"
-                app:layout_constraintStart_toStartOf="@id/tokenguideline10"
-                app:layout_constraintTop_toTopOf="@id/tokenguideline4">
+                    <ImageView
+                        android:id="@+id/token3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/token12"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/token4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tokencenter"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tokenguideline2">
 
-                <ImageView
-                    android:id="@+id/token13"
-                    android:layout_width="match_parent"
+
+                    <ImageView
+                        android:id="@+id/token7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tokenbottombottom"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/tokenguideline11"
+                    app:layout_constraintStart_toStartOf="@id/tokenguideline10"
+                    app:layout_constraintTop_toTopOf="@id/tokenguideline4">
 
-                <ImageView
-                    android:id="@+id/token14"
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/token12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                    <ImageView
+                        android:id="@+id/token14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tokencentertop"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="@id/tokenguideline9"
+                    app:layout_constraintStart_toStartOf="@id/tokenguideline5"
+                    app:layout_constraintTop_toTopOf="@id/tokenguideline1">
 
-            </LinearLayout>
+                    <ImageView
+                        android:id="@+id/token15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        app:srcCompat="@drawable/hex18" />
 
-            <LinearLayout
-                android:id="@+id/tokencentertop"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@id/tokenguideline9"
-                app:layout_constraintStart_toStartOf="@id/tokenguideline5"
-                app:layout_constraintTop_toTopOf="@id/tokenguideline1">
+                    <ImageView
+                        android:id="@+id/token16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/token15"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    app:srcCompat="@drawable/hex18" />
+                    <ImageView
+                        android:id="@+id/token17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/token16"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                    <ImageView
+                        android:id="@+id/token18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="false"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/hex18" />
 
-                <ImageView
-                    android:id="@+id/token17"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/token18"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:adjustViewBounds="true"
-                    android:cropToPadding="false"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/hex18" />
-
-            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-
-        android:id="@+id/Butt"
-        android:elevation="5dp"
-        android:translationZ="2dp"
-        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/button_design"
-        android:text="@string/generate"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.247"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="62dp"
-        android:background="@drawable/button_design"
-        android:elevation="6dp"
-        android:text="@string/toggle"
-        android:translationZ="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Butt"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.879" />
 
 
     <!-- The way this works is a relative layout has two LinearLayouts, one for the Hexes, one for the

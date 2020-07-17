@@ -3,5 +3,22 @@
     <string name="welcome">Title of app placeholder</string>
     <string name="generate">Randomise</string>
     <string name="switcheroo">Switch</string>
+    <string name="Dice">Dice Randomiser</string>
+    <string name="Rules">Game Overview</string>
+    <string name="Board">Board Generator</string>
     <string name="toggle">Tokens</string>
+    <string name="rules">Rulebook</string>
+    <string name="roll">Roll Dice</string>
+    <string name="overview1">The island of Catan lies before you. The isle consists of 19 terrain tiles surrounded by ocean. Your goal is to settle on Catan, and expand your territory until it becomes the largest and most glorious in Catan.</string>
+    <string name="overview2">There are five productive terrain types and one desert on Catan. Each terrain type produces a different type of resource (the desert produces nothing). Each resource you receive is represented by a card.</string>
+    <string name="overview3">You begin the game with 2 settlements and 2 roads. Each settlement is worth 1 Victory point. You therefore start the game with 2 Victory points! The first player to acquire 10 Victory points on their turn wins the game</string>
+    <string name="overview4">To gain more Victory points, you must build new roads and settlements and upgrade your settlements to cities. Each city is worth 2 Victory points. To build or upgrade, you need to acquire resources</string>
+    <string name="overview5">"How do you acquire resources? It's simple. Each turn, 2 dice are rolled to determine which terrain hexes produce resources. Each terrain hex is marked with a round number token. If, for example, a '10' is rolled, all terrain hexes with a '10' number token produce resources. You only collect resources if you own a settlement or city bordering these terrain hexes."</string>
+    <string name="overview6">"Since the settlements and cities usually border on 2–3 terrain types. they can 'harvest' up to 3 different resources based on the dice roll. Since it's impossible for you to have settlements adjacent to all terrain hexes and number tokens, you may receive certain resources only at rare intervals, or never. This is tough, because building requires specific resource combinations"</string>
+    <string name="overview7">For this reason, you can trade with other players. Make them an offer! A successful trade might yield you a big build!</string>
+    <string name="overview8">You can only build a new settlement on an unoccupied intersection if you have a road leading to that intersection and the nearest settlement is at least two intersections away.</string>
+    <string name="overview9">Carefully consider where you build settlements. The numbers on the round tokens are depicted in varying sizes. They also have dots below the numbers. The larger the depicted number, and the more dots it has, the more likely that number is to be rolled. The red number 6 and 8 are the largest numbers with the most dots; they are likely to be rolled most frequently.</string>
+    <string name="overview10">Bottom line: the more frequently a number is rolled, the more often the hexes with those numbers produce resources. You should consider settling on hexes that have good potential for production (like 6 and 8 rather than 12 and 2). However, these same high producing hexes are often the primary target for the robber</string>
+
+
 </resources>

@@ -12,7 +12,7 @@
         android:id="@+id/button"
         android:layout_width="212dp"
 
-        android:layout_height="108dp"
+        android:layout_height="108dp"   
 
         android:background="@drawable/main_button_design"
         app:layout_constraintBottom_toBottomOf="parent"
