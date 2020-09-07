@@ -1,4 +1,4 @@
-package com.example.catanboard
+package com.catanboardapp.catanboard
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

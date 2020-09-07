@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Catanomics3</string>
+    <string name="app_name">Catan Board Generator</string>
     <string name="welcome">Title of app placeholder</string>
     <string name="generate">Randomise</string>
     <string name="switcheroo">Switch</string>

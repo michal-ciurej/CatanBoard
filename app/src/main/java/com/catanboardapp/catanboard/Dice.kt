@@ -1,7 +1,6 @@
-package com.example.catanboard
+package com.catanboardapp.catanboard
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.catanboard
+package com.catanboardapp.catanboard
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,11 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.ToggleButton
-import com.example.catanboard.R.layout.board
+import com.catanboardapp.catanboard.R.layout.board
 import kotlinx.android.synthetic.main.board.*
-
-
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 

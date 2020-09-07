@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.catanboard">
+    package="com.catanboardapp.catanboard">
 
     <application
         android:allowBackup="true"
@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/cb_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dice"></activity>
-        <activity android:name=".Rules" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.catanboardapp.catanboard.Dice"></activity>
+        <activity android:name="com.catanboardapp.catanboard.Rules" />
+        <activity
+            android:name="com.catanboardapp.catanboard.MainActivity"
+
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
