@@ -7,7 +7,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.catanboard"
+        applicationId "com.catanboardapp.catanboard"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
